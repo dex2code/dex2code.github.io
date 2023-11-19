@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Pixelify Sans';
+    src: URL('../fonts/PixelifySans-Regular.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Pixelify Sans';
+}
+
+a {
+    text-decoration: none;
+    color: blueviolet;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}

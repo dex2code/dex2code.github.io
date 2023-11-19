@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="styles/bootstrap.min.css">
+        <link rel="stylesheet" href="styles/cropper.min.css">
+        <link rel="stylesheet" href="styles/local.css">
+
+        <title>NFT Factory</title>
+
+    </head>
+
+    <body>
+
+        <!-- SC Address -->
+        <div class="container bg-transparent text-end text-uppercase fs-5 text-secondary">
+
+            <br />
+
+            <span id="span-smart-contract" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">
+            </span>
+
+            &NonBreakingSpace;
+
+            <span id="copy-smart-contract">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-copy" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2Zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H6ZM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1H2Z"/>
+                </svg>
+            </span>
+
+            &NonBreakingSpace;
+
+            <span id="link-smart-contract">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+                </svg>
+            </span>
+
+        </div>
+        <!-- End SC Address -->
+
+
+        <!-- navBar -->
+        <nav class="navbar bg-transparent">
+            <div class="container bg-transparent">
+                <img class="navbar-brand mb-3" src="assets/logo.png" alt="NFT Factory" width="100" height="110">
+                <button class="d-flex btn btn-lg" id="btn-connect-wallet" onclick="">
+                    <img class="me-3" src="assets/metamask.png" alt="" width="35px" height="35px">
+                    <span class="fs-4" id="span-connect-wallet"></span>
+                </button>
+            </div>
+        </nav>
+
+        <div class="container bg-transparent text-uppercase border-bottom">
+            <span>
+                <h1 class="display-3">
+                    NFT&NonBreakingSpace;Factory
+                </h1>
+            </span>
+        </div>
+        <!-- End navBar-->
+
+        <br />
+
+        <!-- Cropper -->
+        <div class="container bg-transparent">
+            <form id="imgForm">
+                <input id="imgUploadButton" class="form-control-sm" type="file" accept="image/*" />
+            </form>
+        </div>
+
+        <br />
+
+        <div class="container bg-transparent">
+            <div style="width: 350px; height: 350px; max-width: 350px; max-height: 350px; min-width: 350px; min-height: 350px;">
+                <img id="imgCanvas" src="assets/imgTemplate.png" width="350" height="350" />
+            </div><br />
+        </div>
+        <!-- End Cropper -->
+
+        <!-- NFT Data -->
+        <div class="container bg-transparent">
+                <p>
+                    <label for="nftName">Input your <a href="https://nft.storage" target="_blank">NFT.storage</a> Key (Free!):</label>
+                    <textarea id="nftStorageKey" rows="4" class="form-control"></textarea>
+                </p>
+
+                <p>
+                    <label for="nftName">NFT Name:</label>
+                    <input id="nftName" type="text" class="form-control">
+                </p>
+
+                <p>
+                    <label for="nftDescription">NFT Description:</label>
+                    <textarea id="nftDescription" rows="4" class="form-control"></textarea>
+                </p>
+
+                <p>
+                    <button id="nftMint" class="btn btn-outline-primary" type="button">
+                        <span id="minting-spinner" class="spinner-border spinner-border-sm visually-hidden" role="status" aria-hidden="true"></span>
+                        Mint!
+                    </button>
+                </p>
+        </div>
+        <!-- End NFT Data -->
+
+
+        <!-- Toast -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-2 bg-transparent" style="z-index: 11" onclick="$('#toast-div').toast('hide');">
+            <div id="toast-div" class="toast hide bg-transparent" role="alert" aria-live="assertive" aria-atomic="true" data-bs-animation="true" data-bs-autohide="true" data-bs-delay="5000">
+                <div id="toast-body" class="toast-body bg-opacity-50 h4 text-light">
+                    <span id="toast-text"></span>
+                </div>
+            </div>
+        </div>
+        <!-- End Toast -->
+
+        
+        <!-- Modal -->
+        <div class="modal fade" id="modalWindowDiv" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 id="modalWindowHead" class="modal-title"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <span id="modalWindowBody"></span>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Modal -->
+
+
+        <script type="text/javascript" src="lib/jquery-3.7.1.min.js"></script>
+        <script type="text/javascript" src="lib/js.cookie.min.js"></script>
+        <script type="text/javascript" src="lib/cropper.min.js"></script>
+        <script type="text/javascript" src="lib/jquery-cropper.min.js"></script>
+        <script type="text/javascript" src="lib/bootstrap.bundle.min.js"></script>
+
+        <script type="text/javascript" src="app/settings.js"></script>
+        <script type="text/javascript" src="app/tools.js"></script>
+        <script type="text/javascript" src="app/init.js"></script>
+        <script type="text/javascript" src="app/wallet.js"></script>
+        <script type="module"          src="app/minter.js"></script>
+        <script type="text/javascript" src="app/last.js"></script>
+
+        <script type="text/javascript">
+            initWallet();
+        </script>
+
+
+    </body>
+
+</html>
