@@ -1,5 +1,5 @@
 /**
- *Submitted for verification at mumbai.polygonscan.com on 2023-11-18
+ *Submitted for verification at polygonscan.com on 2023-11-19
 */
 
 // File: @openzeppelin/contracts@5.0.0/interfaces/draft-IERC6093.sol
@@ -1855,42 +1855,35 @@ abstract contract ERC721URIStorage is IERC4906, ERC721 {
     }
 }
 
-// File: contract-e27d3ca9df.sol
+// File: contract-4300a2b77f.sol
 
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
 
-contract NFT_Factory is ERC721, ERC721URIStorage, ERC721Pausable, Ownable {
+
+
+
+contract NFTFactory is ERC721, ERC721URIStorage, ERC721Pausable, Ownable {
     uint256 private _nextTokenId;
 
     constructor()
-        ERC721("NFT_Factory", "NFT")
+        ERC721("NFT Factory", "NFT")
         Ownable(msg.sender)
     {}
 
-    function pause()
-        public
-        onlyOwner
-    {
+    function pause() public onlyOwner {
         _pause();
     }
 
-    function unpause()
-        public
-        onlyOwner
-    {
+    function unpause() public onlyOwner {
         _unpause();
     }
 
-    function safeMint(address to, string memory uri)
-        public
-        returns(uint256)
-    {
+    function safeMint(address to, string memory uri) public returns(uint256) {
         uint256 tokenId = _nextTokenId++;
         _safeMint(to, tokenId);
         _setTokenURI(tokenId, uri);
-
         return tokenId;
     }
 
@@ -1921,5 +1914,4 @@ contract NFT_Factory is ERC721, ERC721URIStorage, ERC721Pausable, Ownable {
     {
         return super.supportsInterface(interfaceId);
     }
-
 }
