@@ -1,0 +1,19 @@
+@font-face {
+    font-family: __Inter_a64ecd;
+    font-style:normal;
+    font-weight: 250;
+    font-display: swap;
+    src: url("../fonts/main.woff2") format("woff2");
+}
+
+body {
+    font-family: __Inter_a64ecd;
+    color: white;
+    font-size: larger;
+    background-color: rgba(40, 0, 70, 1);
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+    color: white;
+}

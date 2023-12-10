@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="styles/bootstrap.min.css">
+        <link rel="stylesheet" href="styles/local.css">
+
+        <title>Ethernity Cloud token info</title>
+
+    </head>
+
+
+    <body><br />
+
+        <!-- navBar -->
+        <nav class="navbar bg-transparent">
+            <div class="container bg-transparent">
+                <img class="navbar-brand mb-3" src="assets/logo.webp" alt="Ethernity Cloud" width="200">
+                <button class="d-flex btn btn-lg" id="btn-connect-wallet" onclick="">
+                    <img class="me-3" src="assets/metamask.png" alt="" width="35px" height="35px">
+                    <span class="fs-4" id="span-connect-wallet"></span>
+                </button>
+            </div>
+        </nav>
+
+        <div class="container bg-transparent border-bottom"><br/>
+            <span>
+                <h3 class="display-3">
+                    Token&NonBreakingSpace;Info
+                </h3>
+            </span>
+        </div>
+        <!-- End navBar -->
+
+        <br /><br />
+
+        <!-- ETNY -->
+        <div class="container bg-transparent lh-sm">
+            <p class="h2"><b>ETNY</b> Token:</p>
+
+            <p>
+                <li>Bloxberg Blockchain: <a class="btn btn-outline-light" role="button" href="https://bloxberg.org/" target="_blank">https://bloxberg.org/</a></li><br />
+                <li>Bloxberg Explorer: <a class="btn btn-outline-light" role="button" href="https://blockexplorer.bloxberg.org/" target="_blank">https://blockexplorer.bloxberg.org/</a></li><br />
+                <li>Bloxberg Faucet: <a class="btn btn-outline-light" role="button" href="https://faucet.bloxberg.org/" target="_blank">https://faucet.bloxberg.org/</a></li>
+            </p>
+            
+            <p>
+                <br /><a id="btn-add-etny" class="btn btn-outline-warning" role="button">Add ETNY Token to Web3 Wallet</a>
+            </p>
+
+            <br />
+
+            <p class="h6 lh-base">
+                !!! Adding assets to your wallet depends on whether it supports this functionality!<br />
+                Only the desktop version of the <u><a href="https://metamask.io" target="_blank">Metamask wallet</a></u> supports both functions.<br />
+                If you are using the mobile version of Metamask or any another Web3-wallet<br />
+                you can also add the network and token manually using the following settings:
+            </p>
+
+            <p class="lh-base">
+                <br /><b>Bloxberg network</b>:<br />
+                <li><b>Name</b>: Bloxberg Mainnet</li>
+                <li><b>RPC URL</b>: https://core.bloxberg.org</li>
+                <li><b>Network ID</b>: 8995 (0x2323)</li>
+                <li><b>Currency</b>: BERG</li>
+                <li><b>Network Explorer</b>: https://blockexplorer.bloxberg.org</li><br />
+                <a class="btn btn-outline-light" role="button" href="https://chainlist.org/chain/8995" target="_blank">View Bloxberg network on ChainList.org</a>
+            </p>
+
+            <p class="lh-base">
+                <br /><b>ETNY Token</b>:<br />
+                <li>
+                    <b>Contract Address</b>: 0x549A6E06BB2084100148D50F51CF77a3436C3Ae7&nbsp;
+
+                    <span onclick="navigator.clipboard.writeText('0x549A6E06BB2084100148D50F51CF77a3436C3Ae7'); showToast(true, 'Contract address copied!');">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-copy" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2Zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H6ZM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1H2Z"/>
+                        </svg>
+                    </span>&nbsp;
+
+                    <span onclick="window.open('https://blockexplorer.bloxberg.org/address/0x549A6E06BB2084100148D50F51CF77a3436C3Ae7');">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+                        </svg>
+                    </span>
+
+                </li>
+                <li><b>Symbol</b>: ETNY</li>
+                <li><b>Decimals</b>: 18</li><br />
+                <a class="btn btn-outline-light" role="button" href="https://blockexplorer.bloxberg.org/token/0x549A6E06BB2084100148D50F51CF77a3436C3Ae7" target="_blank">View ETNY on Bloxberg Explorer</a>
+            </p>
+
+        </div>
+        <!-- End Etny -->
+
+
+        <!-- Toast -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-2 bg-transparent" style="z-index: 11" onclick="$('#toast-div').toast('hide');">
+            <div id="toast-div" class="toast hide bg-transparent" role="alert" aria-live="assertive" aria-atomic="true" data-bs-animation="true" data-bs-autohide="true" data-bs-delay="5000">
+                <div id="toast-body" class="toast-body bg-opacity-50 h4 text-light">
+                    <span id="toast-text"></span>
+                </div>
+            </div>
+        </div>
+        <!-- End Toast -->
+        
+
+        <script type="text/javascript" src="lib/jquery.min.js"></script>
+        <script type="text/javascript" src="lib/bootstrap.min.js"></script>
+
+        <script type="text/javascript" src="js/settings.js"></script>
+        <script type="text/javascript" src="js/tools.js"></script>
+        <script type="text/javascript" src="js/init.js"></script>
+        <script type="text/javascript" src="js/wallet.js"></script>
+        <script type="text/javascript" src="js/tokens.js"></script>
+        <script type="text/javascript" src="js/last.js"></script>
+
+        <script type="text/javascript">
+            initWallet();
+        </script>
+
+    </body>
+
+
+</html>
