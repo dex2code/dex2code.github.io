@@ -19,7 +19,7 @@
         <!-- navBar -->
         <nav class="navbar bg-transparent">
             <div class="container bg-transparent">
-                <img class="navbar-brand mb-3" src="assets/logo.webp" alt="Ethernity Cloud" width="200">
+                <a href="https://ethernity.cloud"><img class="navbar-brand mb-3" src="assets/logo.webp" alt="Ethernity Cloud" width="300"></a>
                 <button class="d-flex btn btn-lg" id="btn-connect-wallet" onclick="">
                     <img class="me-3" src="assets/metamask.png" alt="" width="35px" height="35px">
                     <span class="fs-4" id="span-connect-wallet"></span>
@@ -39,7 +39,7 @@
         <br />
         <div class="container bg-transparent h5 lh-base">
             !!! <b>Adding assets to your wallet depends on whether it supports this functionality</b> !!!<br />
-            Only the <b>desktop</b> version of the <u><a id="href-wallet" target="_blank">Metamask wallet</a></u> supports all neccessary functions.<br />
+            Only the <a id="href-wallet" target="_blank" class="text-warning">desktop version of the Metamask wallet</a> supports all neccessary functions.<br />
             If you are using the mobile version of Metamask or any another Web3-wallet<br />
             you can also add the network and token manually using the following settings:
         </div>
@@ -51,7 +51,7 @@
 
             <div class="border-start border-light pt-2 ps-5">
 
-                <p style="word-break: break-all; word-wrap: break-word;">
+                <p>
                     <li>Bloxberg Blockchain: <a id="btn-ETNYnetworkURL" class="btn btn-outline-light" role="button" target="_blank"><span id="span-ETNYnetworkURL"></span></a></li><br />
                     <li>Bloxberg Explorer: <a id="btn-ETNYnetworkExplorer" class="btn btn-outline-light" role="button" target="_blank"><span id="span-ETNYnetworkExplorer"></span></a></li><br />
                     <li>Bloxberg Faucet: <a id="btn-ETNYnetworkFaucet" class="btn btn-outline-light" role="button" target="_blank"><span id="span-ETNYnetworkFaucet"></span></a></li>
@@ -61,7 +61,7 @@
                     <br /><a id="btn-add-etny" class="btn btn-outline-warning" role="button">Add <b>ETNY</b> Token to Web3 Wallet</a>
                 </p>
 
-                <p style="word-break: break-all; word-wrap: break-word;">
+                <p>
                     <br /><b>Bloxberg network</b>:<br />
                     <li><b>Name</b>: <span id="span-bloxName"></span></li>
                     <li><b>RPC URL</b>: <span id="span-bloxRPC"></span></li>
@@ -71,7 +71,7 @@
                     <a class="btn btn-outline-light" role="button" href="https://chainlist.org/chain/8995" target="_blank">View Bloxberg network on ChainList.org</a>
                 </p>
 
-                <p style="word-break: break-all; word-wrap: break-word;">
+                <p>
                     <br /><b>ETNY Token</b>:<br />
                     <li><b>Contract Address</b>: <span id="span-etnySC"></span></li>
                     <li><b>Symbol</b>: <span id="span-etnySymbol"></span></li>
