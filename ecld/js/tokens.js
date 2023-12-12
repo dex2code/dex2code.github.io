@@ -5,7 +5,7 @@ async function addETNYToken() {
         await window.ethereum.request(
             {
                 method: 'wallet_switchEthereumChain',
-                params: [{ chainId: `'${etnyToken['chainDetails']['chainId']}'` }]
+                params: [{ chainId: etnyToken['chainDetails']['chainId'] }]
             });
 
     } catch(err) {
@@ -52,7 +52,7 @@ async function addETNYToken() {
 
             logger('warning', `(addETNYToken) -- Unknown problem: (Code: ${err.code})`);
 
-            showToast(false, `Cannot switch your wallet to ${etnyToken['chainDetails']['chainName']} (${err.code})`);
+            showToast(false, `Cannot switch your wallet to ${etnyToken['chainDetails']['chainName']} (${err.text})`);
 
             return;
 
