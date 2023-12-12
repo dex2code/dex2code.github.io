@@ -34,6 +34,8 @@ async function logger(severity, message) {
 
 async function showToast(success, message) {
 
+    $('html, body').animate({ scrollTop: 0 }, 'fast');
+
     $('#toast-body').removeClass('bg-success');
     $('#toast-body').removeClass('bg-danger');
 
