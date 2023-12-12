@@ -4,8 +4,8 @@ async function addETNYToken() {
 
         await window.ethereum.request(
             {
-                method: 'wallet_switchEthereumChain',
-                params: [{ chainId: etnyToken['chainDetails']['chainId'] }]
+                "method": "wallet_switchEthereumChain",
+                "params": [{ chainId: etnyToken['chainDetails']['chainId'] }]
             });
 
     } catch(err) {
