@@ -36,70 +36,102 @@
         </div>
         <!-- End navBar -->
 
-        <br /><br />
+        <br />
+        <div class="container bg-transparent h5 lh-base">
+            !!! <b>Adding assets to your wallet depends on whether it supports this functionality</b> !!!<br />
+            Only the <b>desktop</b> version of the <u><a id="href-wallet" target="_blank">Metamask wallet</a></u> supports all neccessary functions.<br />
+            If you are using the mobile version of Metamask or any another Web3-wallet<br />
+            you can also add the network and token manually using the following settings:
+        </div>
+        <br />
 
         <!-- ETNY -->
         <div class="container bg-transparent lh-sm">
-            <p class="h2"><b>ETNY</b> Token:</p>
+            <p class="h2"><b class="text-warning">ETNY</b> Token:</p>
 
-            <p>
-                <li>Bloxberg Blockchain: <a class="btn btn-outline-light" role="button" href="https://bloxberg.org/" target="_blank">https://bloxberg.org/</a></li><br />
-                <li>Bloxberg Explorer: <a class="btn btn-outline-light" role="button" href="https://blockexplorer.bloxberg.org/" target="_blank">https://blockexplorer.bloxberg.org/</a></li><br />
-                <li>Bloxberg Faucet: <a class="btn btn-outline-light" role="button" href="https://faucet.bloxberg.org/" target="_blank">https://faucet.bloxberg.org/</a></li>
-            </p>
-            
-            <p>
-                <br /><a id="btn-add-etny" class="btn btn-outline-warning" role="button">Add ETNY Token to Web3 Wallet</a>
-            </p>
+            <div class="border-start border-light pt-2 ps-5">
 
-            <br />
+                <p>
+                    <li>Bloxberg Blockchain: <a id="btn-ETNYnetworkURL" class="btn btn-outline-light" role="button" target="_blank"><span id="span-ETNYnetworkURL"></span></a></li><br />
+                    <li>Bloxberg Explorer: <a id="btn-ETNYnetworkExplorer" class="btn btn-outline-light" role="button" target="_blank"><span id="span-ETNYnetworkExplorer"></span></a></li><br />
+                    <li>Bloxberg Faucet: <a id="btn-ETNYnetworkFaucet" class="btn btn-outline-light" role="button" target="_blank"><span id="span-ETNYnetworkFaucet"></span></a></li>
+                </p>
+                
+                <p>
+                    <br /><a id="btn-add-etny" class="btn btn-outline-warning" role="button">Add <b>ETNY</b> Token to Web3 Wallet</a>
+                </p>
 
-            <p class="h6 lh-base">
-                !!! Adding assets to your wallet depends on whether it supports this functionality!<br />
-                Only the desktop version of the <u><a href="https://metamask.io" target="_blank">Metamask wallet</a></u> supports both functions.<br />
-                If you are using the mobile version of Metamask or any another Web3-wallet<br />
-                you can also add the network and token manually using the following settings:
-            </p>
+                <p>
+                    <br /><b>Bloxberg network</b>:<br />
+                    <li><b>Name</b>: <span id="span-bloxName"></span></li>
+                    <li><b>RPC URL</b>: <span id="span-bloxRPC"></span></li>
+                    <li><b>Network ID</b>: <span id="span-bloxId"></span></li>
+                    <li><b>Currency</b>: <span id="span-bloxCurrency"></span></li>
+                    <li><b>Network Explorer</b>: <span id="span-bloxExplorer"></span></li><br />
+                    <a class="btn btn-outline-light" role="button" href="https://chainlist.org/chain/8995" target="_blank">View Bloxberg network on ChainList.org</a>
+                </p>
 
-            <p class="lh-base">
-                <br /><b>Bloxberg network</b>:<br />
-                <li><b>Name</b>: Bloxberg Mainnet</li>
-                <li><b>RPC URL</b>: https://core.bloxberg.org</li>
-                <li><b>Network ID</b>: 8995 (0x2323)</li>
-                <li><b>Currency</b>: BERG</li>
-                <li><b>Network Explorer</b>: https://blockexplorer.bloxberg.org</li><br />
-                <a class="btn btn-outline-light" role="button" href="https://chainlist.org/chain/8995" target="_blank">View Bloxberg network on ChainList.org</a>
-            </p>
+                <p class="lh-base">
+                    <br /><b>ETNY Token</b>:<br />
+                    <li><b>Contract Address</b>: <span id="span-etnySC"></span></li>
+                    <li><b>Symbol</b>: <span id="span-etnySymbol"></span></li>
+                    <li><b>Decimals</b>: <span id="span-etnyDec"></span></li><br />
+                    <a id="btn-viewETNY" class="btn btn-outline-light" role="button" target="_blank">View <b>ETNY</b> on Bloxberg Explorer</a>
+                </p>
+                <br />
 
-            <p class="lh-base">
-                <br /><b>ETNY Token</b>:<br />
-                <li>
-                    <b>Contract Address</b>: 0x549A6E06BB2084100148D50F51CF77a3436C3Ae7&nbsp;
-
-                    <span onclick="navigator.clipboard.writeText('0x549A6E06BB2084100148D50F51CF77a3436C3Ae7'); showToast(true, 'Contract address copied!');">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-copy" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2Zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H6ZM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1H2Z"/>
-                        </svg>
-                    </span>&nbsp;
-
-                    <span onclick="window.open('https://blockexplorer.bloxberg.org/address/0x549A6E06BB2084100148D50F51CF77a3436C3Ae7');">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                        </svg>
-                    </span>
-
-                </li>
-                <li><b>Symbol</b>: ETNY</li>
-                <li><b>Decimals</b>: 18</li><br />
-                <a class="btn btn-outline-light" role="button" href="https://blockexplorer.bloxberg.org/token/0x549A6E06BB2084100148D50F51CF77a3436C3Ae7" target="_blank">View ETNY on Bloxberg Explorer</a>
-            </p>
+            </div>
 
         </div>
         <!-- End Etny -->
 
+        <br /><br />
+
+        <!-- ECLD -->
+        <div class="container bg-transparent lh-sm">
+            <p class="h2"><b class="text-warning">ECLD</b> Token:</p>
+
+            <div class="border-start border-light pt-2 ps-5">
+
+                <p>
+                    <li>Polygon Blockchain: <a id="btn-ECLDnetworkURL" class="btn btn-outline-light" role="button" target="_blank"><span id="span-ECLDnetworkURL"></span></a></li><br />
+                    <li>Polygon Explorer: <a id="btn-ECLDnetworkExplorer" class="btn btn-outline-light" role="button" target="_blank"><span id="span-ECLDnetworkExplorer"></span></a></li>
+                </p>
+                
+                <p>
+                    <br /><a id="btn-add-ecld" class="btn btn-outline-warning" role="button">Add <b>ECLD</b> Token to Web3 Wallet</a>
+                </p>
+
+                <p>
+                    <br /><b>Polygon network</b>:<br />
+                    <li><b>Name</b>: <span id="span-polygonName"></span></li>
+                    <li><b>RPC URL</b>: <span id="span-polygonRPC"></span></li>
+                    <li><b>Network ID</b>: <span id="span-polygonId"></span></li>
+                    <li><b>Currency</b>: <span id="span-polygonCurrency"></span></li>
+                    <li><b>Network Explorer</b>: <span id="span-polygonExplorer"></span></li><br />
+                    <a class="btn btn-outline-light" role="button" href="https://chainlist.org/chain/137" target="_blank">View Polygon network on ChainList.org</a>
+                </p>
+
+                <p class="lh-base">
+                    <br /><b>ECLD Token</b>:<br />
+                    <li><b>Contract Address</b>: <span id="span-ecldSC"></span></li>
+                    <li><b>Symbol</b>: <span id="span-ecldSymbol"></span></li>
+                    <li><b>Decimals</b>: <span id="span-ecldDec"></span></li><br />
+                    <a id="btn-viewECLD" class="btn btn-outline-light" role="button" target="_blank">View <b>ECLD</b> on Polygon Explorer</a>
+                </p>
+
+                <br />
+
+            </div>
+
+        </div>
+        <!-- End ECLD -->
+
+        <br /><br />
+
 
         <!-- Toast -->
-        <div class="toast-container position-fixed bottom-0 end-0 p-2 bg-transparent" style="z-index: 11" onclick="$('#toast-div').toast('hide');">
+        <div class="toast-container p-2 bg-transparent top-0 start-50 translate-middle-x " onclick="$('#toast-div').toast('hide');">
             <div id="toast-div" class="toast hide bg-transparent" role="alert" aria-live="assertive" aria-atomic="true" data-bs-animation="true" data-bs-autohide="true" data-bs-delay="5000">
                 <div id="toast-body" class="toast-body bg-opacity-50 h4 text-light">
                     <span id="toast-text"></span>

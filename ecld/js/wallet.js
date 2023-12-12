@@ -116,6 +116,9 @@ async function walletConnected() {
         $('#btn-add-etny').off('click');
         $('#btn-add-etny').click(function() { addETNYToken(); });
 
+        $('#btn-add-ecld').off('click');
+        $('#btn-add-ecld').click(function() { addECLDToken(); });
+
         window.ethereum.on('accountsChanged', handleAccountsChanged);
 
     } else {
@@ -153,7 +156,10 @@ async function initWallet() {
     }
 
     $('#btn-add-etny').off('click');
-    $('#btn-add-etny').click(function() { showToast(false, "Connect your Wallet first!"); });
+    $('#btn-add-etny').click(function() { $('html, body').animate({ scrollTop: 0 }, 'fast'); showToast(false, "Connect your Wallet first!"); });
+
+    $('#btn-add-ecld').off('click');
+    $('#btn-add-ecld').click(function() { $('html, body').animate({ scrollTop: 0 }, 'fast'); showToast(false, "Connect your Wallet first!"); });
 
     return;
 }
