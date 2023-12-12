@@ -32,7 +32,7 @@ async function addETNYToken() {
                 } else {
                     logger('warning', `(addETNYToken) -- Unknown problem: (Code: ${err.code})`);
         
-                    showToast(false, `Cannot switch your wallet to ${etnyToken['chainDetails']['chainName']} (${err.code})`);
+                    showToast(false, `Cannot switch your wallet to ${etnyToken['chainDetails']['chainName']} (Code: ${err.code})`);
         
                     return;
         
@@ -52,7 +52,7 @@ async function addETNYToken() {
 
             logger('warning', `(addETNYToken) -- Unknown problem: (Code: ${err.code})`);
 
-            showToast(false, `Cannot switch your wallet to ${etnyToken['chainDetails']['chainName']} (${err.message})`);
+            showToast(false, `Cannot switch your wallet to ${etnyToken['chainDetails']['chainName']} (Code: ${err.code})`);
 
             return;
 
@@ -76,8 +76,8 @@ async function addETNYToken() {
     
     } catch (err) {
 
-        logger('warning', `(addWalletAsset) -- Cannot add asset (${err})`);
-        showToast(false, `Cannot add asset to your wallet. Try to add it manually.`);
+        logger('warning', `(addWalletAsset) -- Cannot add asset (${err.code})`);
+        showToast(false, `Cannot add asset to your wallet (Code: ${err.code}). Try to add it manually.`);
 
         return false;
 
@@ -123,7 +123,7 @@ async function addECLDToken() {
                 } else {
                     logger('warning', `(addECLDToken) -- Unknown problem: (Code: ${err.code})`);
         
-                    showToast(false, `Cannot switch your wallet to ${ecldToken['chainName']} (${err.code})`);
+                    showToast(false, `Cannot switch your wallet to ${ecldToken['chainName']} (Code: ${err.code})`);
         
                     return;
         
@@ -143,7 +143,7 @@ async function addECLDToken() {
 
             logger('warning', `(addECLDToken) -- Unknown problem: (Code: ${err.code})`);
 
-            showToast(false, `Cannot switch your wallet to ${ecldToken['chainName']} (${err.code})`);
+            showToast(false, `Cannot switch your wallet to ${ecldToken['chainName']} (Code: ${err.code})`);
 
             return;
 
@@ -168,7 +168,7 @@ async function addECLDToken() {
     } catch (err) {
 
         logger('warning', `(addWalletAsset) -- Cannot add asset (${err})`);
-        showToast(false, `Cannot add asset to your wallet. Try to add it manually.`);
+        showToast(false, `Cannot add asset to your wallet (Code: ${err.code}). Try to add it manually.`);
 
         return false;
 
