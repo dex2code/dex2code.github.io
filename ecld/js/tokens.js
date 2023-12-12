@@ -52,7 +52,7 @@ async function addETNYToken() {
 
             logger('warning', `(addETNYToken) -- Unknown problem: (Code: ${err.code})`);
 
-            showToast(false, `Cannot switch your wallet to ${etnyToken['chainName']} (${err.code})`);
+            showToast(false, `Cannot switch your wallet to ${etnyToken['chainDetails']['chainName']} (${err.code})`);
 
             return;
 
