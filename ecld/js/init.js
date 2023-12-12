@@ -26,6 +26,7 @@ $('#btn-viewETNY').attr('href', `${etnyToken['chainDetails']['blockExplorerUrls'
 
 
 
+
 $('#span-ECLDnetworkURL').text(ecldToken['networkURL']);
 $('#btn-ECLDnetworkURL').attr('href', ecldToken['networkURL']);
 
