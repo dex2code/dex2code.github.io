@@ -10,7 +10,7 @@ async function addETNYToken() {
 
     } catch(err) {
 
-        if (err.code === 4902) {
+        if (err.code === 4902 || err.code === -32603) {
             logger('warning', `(addETNYToken) -- chaiId ${etnyToken['chainID']} is not presented (Code: ${err.code}). Trying to add...`);
 
             try {
@@ -101,7 +101,7 @@ async function addECLDToken() {
 
     } catch(err) {
 
-        if (err.code === 4902) {
+        if (err.code === 4902 || err.code === -32603) {
             logger('warning', `(addECLDToken) -- chaiId ${ecldToken['chainID']} is not presented (Code: ${err.code}). Trying to add...`);
 
             try {
