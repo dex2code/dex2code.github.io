@@ -141,7 +141,7 @@ async function initWallet() {
 
     if (await checkWalletInstalled() === true) {
 
-        $('#btn-connect-wallet').addClass('btn-outline-light');
+        $('#btn-connect-wallet').addClass('btn-outline-warning');
         $('#span-connect-wallet').text('Connect Wallet');
         $('#btn-connect-wallet').off('click');
         $('#btn-connect-wallet').click(function() { connectWallet(); });
