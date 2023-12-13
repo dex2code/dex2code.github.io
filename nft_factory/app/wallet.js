@@ -172,7 +172,7 @@ async function setWalletChainId() {
     
     } catch (err) {
 
-        if (err.code === 4902) {
+        if (err.code === 4902 || err.code === -32603) {
             logger('warning', `(setWalletChainId) -- chaiId ${appChainId} is not presented (Code: ${err.code}). Trying to add...`);
 
             if (await addWalletChainId() === false) {
