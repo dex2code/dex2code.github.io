@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link 
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" 
+            rel="stylesheet" 
+            integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
+            crossorigin="anonymous" 
+        />
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Afacad&family=Pixelify+Sans&family=Roboto+Mono:wght@300&display=swap');
+
+            body {
+                font-family: 'Roboto Mono', monospace;
+                color: white;
+                font-size: x-large;
+                background: linear-gradient(90deg, rgba(4,6,24,1) 0%, rgba(40,0,70,1) 20%);
+                overflow: auto;
+                overflow-wrap: break-word;
+            }
+
+            a:link, a:visited, a:hover, a:active {
+                text-decoration: none;
+                color: white;
+            }
+        </style>
+
+        <title>Ethernity Cloud token info</title>
+
+    </head>
+
+
+    <body><br />
+
+        <!-- navBar -->
+        <nav class="navbar bg-transparent">
+            <div class="container bg-transparent">
+
+                <a href="https://ethernity.cloud"><img class="navbar-brand mb-3" src="https://ethernity.cloud/images/logo.webp" alt="Ethernity Cloud" width="300"></a>
+
+                <button class="d-flex btn btn-lg" id="btn-connect-wallet" onclick="">
+                    <span class="fs-4" id="span-connect-wallet"></span>
+                </button>
+
+            </div>
+        </nav>
+
+        <div class="container bg-transparent border-bottom"><br/>
+            <span>
+                <h3 class="display-3">
+                    Token&NonBreakingSpace;Info
+                </h3>
+            </span>
+        </div>
+        <!-- End navBar -->
+
+        <br />
+        <div class="container bg-transparent h5 lh-base">
+            <span class="h1 text-danger">⚠</span>&nbsp;&nbsp;<b>Adding assets to your wallet depends on whether it supports this feature!</b><br />
+            At the moment, only <a id="href-wallet" target="_blank" class="text-warning">the Metamask wallet</a> has been tested for 100% compatibility with this page.<br />
+            If you are using another Web3 Wallet, you can also add the network and token manually using the following settings:
+        </div>
+        <br />
+
+        <!-- ETNY -->
+        <div class="container bg-transparent lh-sm">
+            <p class="h2"><b class="text-warning">ETNY</b> Token:</p>
+
+            <div class="border-start border-light pt-2 ps-5">
+
+                <p>
+                    <li>Bloxberg Blockchain: <a id="btn-ETNYnetworkURL" class="btn btn-outline-light" role="button" target="_blank"><span id="span-ETNYnetworkURL"></span></a></li><br />
+                    <li>Bloxberg Explorer: <a id="btn-ETNYnetworkExplorer" class="btn btn-outline-light" role="button" target="_blank"><span id="span-ETNYnetworkExplorer"></span></a></li><br />
+                    <li>Bloxberg Faucet: <a id="btn-ETNYnetworkFaucet" class="btn btn-outline-light" role="button" target="_blank"><span id="span-ETNYnetworkFaucet"></span></a></li>
+                </p>
+                
+                <p>
+                    <br />
+                    <button id="btn-add-etny" class="btn btn-outline-warning">
+                        <span id="btn-spinner-etny" class="spinner-grow spinner-grow-sm visually-hidden" role="status" aria-hidden="true"></span>
+                        Add <b>ETNY</b> Token to Web3 Wallet
+                    </button>
+                </p>
+
+                <p>
+                    <br /><b>Bloxberg network</b>:<br />
+                    <li><b>Name</b>: <span id="span-bloxName"></span></li>
+                    <li><b>RPC URL</b>: <span id="span-bloxRPC"></span></li>
+                    <li><b>Network ID</b>: <span id="span-bloxId"></span></li>
+                    <li><b>Currency</b>: <span id="span-bloxCurrency"></span></li>
+                    <li><b>Network Explorer</b>: <span id="span-bloxExplorer"></span></li><br />
+                    <a class="btn btn-outline-light" role="button" href="https://chainlist.org/chain/8995" target="_blank">View Bloxberg network on ChainList.org</a>
+                </p>
+
+                <p>
+                    <br /><b>ETNY Token</b>:<br />
+                    <li><b>Contract Address</b>: <span id="span-etnySC"></span></li>
+                    <li><b>Symbol</b>: <span id="span-etnySymbol"></span></li>
+                    <li><b>Decimals</b>: <span id="span-etnyDec"></span></li><br />
+                    <a id="btn-viewETNY" class="btn btn-outline-light" role="button" target="_blank">View <b>ETNY</b> on Bloxberg Explorer</a>
+                </p>
+                <br />
+
+            </div>
+
+        </div>
+        <!-- End Etny -->
+
+        <br /><br />
+
+        <!-- ECLD -->
+        <div class="container bg-transparent lh-sm">
+            <p class="h2"><b class="text-warning">ECLD</b> Token:</p>
+
+            <div class="border-start border-light pt-2 ps-5">
+
+                <p>
+                    <li>Polygon Blockchain: <a id="btn-ECLDnetworkURL" class="btn btn-outline-light" role="button" target="_blank"><span id="span-ECLDnetworkURL"></span></a></li><br />
+                    <li>Polygon Explorer: <a id="btn-ECLDnetworkExplorer" class="btn btn-outline-light" role="button" target="_blank"><span id="span-ECLDnetworkExplorer"></span></a></li>
+                </p>
+                
+                <p>
+                    <br />
+                    <button id="btn-add-ecld" class="btn btn-outline-warning">
+                        <span id="btn-spinner-ecld" class="spinner-grow spinner-grow-sm visually-hidden" role="status" aria-hidden="true"></span>
+                        Add <b>ECLD</b> Token to Web3 Wallet
+                    </button>
+                </p>
+
+                <p>
+                    <br /><b>Polygon network</b>:<br />
+                    <li><b>Name</b>: <span id="span-polygonName"></span></li>
+                    <li><b>RPC URL</b>: <span id="span-polygonRPC"></span></li>
+                    <li><b>Network ID</b>: <span id="span-polygonId"></span></li>
+                    <li><b>Currency</b>: <span id="span-polygonCurrency"></span></li>
+                    <li><b>Network Explorer</b>: <span id="span-polygonExplorer"></span></li><br />
+                    <a class="btn btn-outline-light" role="button" href="https://chainlist.org/chain/137" target="_blank">View Polygon network on ChainList.org</a>
+                </p>
+
+                <p>
+                    <br /><b>ECLD Token</b>:<br />
+                    <li><b>Contract Address</b>: <span id="span-ecldSC"></span></li>
+                    <li><b>Symbol</b>: <span id="span-ecldSymbol"></span></li>
+                    <li><b>Decimals</b>: <span id="span-ecldDec"></span></li><br />
+                    <a id="btn-viewECLD" class="btn btn-outline-light" role="button" target="_blank">View <b>ECLD</b> on Polygon Explorer</a>
+                </p>
+
+                <br />
+
+            </div>
+
+        </div>
+        <!-- End ECLD -->
+
+        <br /><br />
+
+
+        <!-- Toast -->
+        <div class="toast-container p-2 bg-transparent top-0 start-50 translate-middle-x " onclick="$('#toast-div').toast('hide');">
+            <div id="toast-div" class="toast hide bg-transparent" role="alert" aria-live="assertive" aria-atomic="true" data-bs-animation="true" data-bs-autohide="true" data-bs-delay="5000">
+                <div id="toast-body" class="toast-body bg-opacity-100 h4 text-light">
+                    <span id="toast-text"></span>
+                </div>
+            </div>
+        </div>
+        <!-- End Toast -->
+        
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script 
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+            crossorigin="anonymous">
+        </script>
+
+
+        <!-- Start Settings -->
+        <script type="text/javascript">
+            
+            const logPrefix = 'ECLD';
+            const walletDownloadURL = 'https://metamask.io/download';
+
+
+            var activeWalletAccount = null;
+            var displayWalletAccount = null;
+
+
+            const appDebug = true;
+
+
+            const etnyToken = {
+
+                chainDetails: {
+                    chainId: '0x2323',
+                    chainName: 'bloxberg',
+                    rpcUrls: [ 'https://core.bloxberg.org' ],
+                    blockExplorerUrls: [ 'https://blockexplorer.bloxberg.org' ],
+                    nativeCurrency: {
+                        name: 'U+25B3',
+                        symbol: 'U+25B3',
+                        decimals: 18
+                    }
+                },
+
+                name: 'ETNY',
+                symbol: 'ETNY',
+                sc: '0x549A6E06BB2084100148D50F51CF77a3436C3Ae7',
+                decimals: 18,
+
+                networkURL: 'https://bloxberg.org',
+                networkFaucet: 'https://faucet.bloxberg.org'
+
+            };
+
+
+            const ecldToken = {
+
+                chainDetails: {
+                    chainId: '0x89',
+                    chainName: 'Polygon Mainnet',
+                    rpcUrls: [ 'https://polygon-rpc.com' ],
+                    blockExplorerUrls: [ 'https://polygonscan.com' ],
+                    nativeCurrency: {
+                        name: 'MATIC',
+                        symbol: 'MATIC',
+                        decimals: 18
+                    }
+                },
+
+                name: 'ECLD',
+                symbol: 'ECLD',
+                sc: '0xc6920888988cAcEeA7ACCA0c96f2D65b05eE22Ba',
+                decimals: 18,
+
+                networkURL: 'https://polygon.technology'
+
+            };
+
+        </script>
+        <!-- End Settings -->
+
+
+        <!-- Start Tools -->
+        <script type="text/javascript">
+            async function logger(severity, message) {
+
+                if (typeof severity !== 'string') {
+                    console.error(`${logPrefix} (${Date.now()}): Wrong severity parameter!`);
+                }
+
+                switch (severity) {
+
+                    case 'debug':
+                        if (appDebug === true) {
+                            console.log(`${logPrefix} (${Date.now()}): ${message}`);
+                        }
+                        break;
+
+                    case 'info':
+                        console.info(`${logPrefix} (${Date.now()}): ${message}`);
+                        break;
+
+                    case 'warning':
+                        console.warn(`${logPrefix} (${Date.now()}): ${message}`);
+                        break;
+
+                    case 'error':
+                        console.error(`${logPrefix} (${Date.now()}): ${message}`);
+                        break;
+
+                    default:
+                        console.error(`${logPrefix} (${Date.now()}): Wrong severity parameter!`);
+                        break;
+
+                }
+            }
+
+
+            async function showToast(success, message) {
+
+                $('html, body').animate({ scrollTop: 0 }, 'fast');
+
+                $('#toast-body').removeClass('bg-success');
+                $('#toast-body').removeClass('bg-danger');
+
+                if (success === true) { $('#toast-body').addClass('bg-success'); }
+                else { $('#toast-body').addClass('bg-danger'); }
+
+                $('#toast-text').text(message);
+
+                $('#toast-div').toast('show');
+
+            }
+
+        </script>
+        <!-- End Tools -->
+
+
+        <!-- Start Init -->
+        <script type="text/javascript">
+
+            $('#href-wallet').attr('href', walletDownloadURL);
+
+
+            $('#span-ETNYnetworkURL').text(etnyToken['networkURL']);
+            $('#btn-ETNYnetworkURL').attr('href', etnyToken['networkURL']);
+
+            $('#span-ETNYnetworkExplorer').text(etnyToken['chainDetails']['blockExplorerUrls']);
+            $('#btn-ETNYnetworkExplorer').attr('href', etnyToken['chainDetails']['blockExplorerUrls']);
+
+            $('#span-ETNYnetworkFaucet').text(etnyToken['networkFaucet']);
+            $('#btn-ETNYnetworkFaucet').attr('href', etnyToken['networkFaucet']);
+
+
+            $('#span-bloxName').text(etnyToken['chainDetails']['chainName']);
+            $('#span-bloxRPC').text(etnyToken['chainDetails']['rpcUrls']);
+            $('#span-bloxId').text(etnyToken['chainDetails']['chainId'] + ' (' + Number(etnyToken['chainDetails']['chainId']) + ')');
+            $('#span-bloxCurrency').text(etnyToken['chainDetails']['nativeCurrency']['symbol']);
+            $('#span-bloxExplorer').text(etnyToken['chainDetails']['blockExplorerUrls']);
+
+
+            $('#span-etnySC').text(etnyToken['sc']);
+            $('#span-etnySymbol').text(etnyToken['symbol']);
+            $('#span-etnyDec').text(etnyToken['decimals']);
+
+            $('#btn-viewETNY').attr('href', `${etnyToken['chainDetails']['blockExplorerUrls'][0]}/token/${etnyToken['sc']}`);
+
+
+            $('#span-ECLDnetworkURL').text(ecldToken['networkURL']);
+            $('#btn-ECLDnetworkURL').attr('href', ecldToken['networkURL']);
+
+
+            $('#span-ECLDnetworkExplorer').text(ecldToken['chainDetails']['blockExplorerUrls']);
+            $('#btn-ECLDnetworkExplorer').attr('href', ecldToken['chainDetails']['blockExplorerUrls']);
+
+            $('#span-ECLDnetworkFaucet').text(ecldToken['networkFaucet']);
+            $('#btn-ECLDnetworkFaucet').attr('href', ecldToken['networkFaucet']);
+
+            $('#href-wallet').attr('href', walletDownloadURL);
+
+
+            $('#span-polygonName').text(ecldToken['chainDetails']['chainName']);
+            $('#span-polygonRPC').text(ecldToken['chainDetails']['rpcUrls']);
+            $('#span-polygonId').text(ecldToken['chainDetails']['chainId'] + ' (' + Number(ecldToken['chainDetails']['chainId']) + ')');
+            $('#span-polygonCurrency').text(ecldToken['chainDetails']['nativeCurrency']['symbol']);
+            $('#span-polygonExplorer').text(ecldToken['chainDetails']['blockExplorerUrls']);
+
+            $('#span-ecldSC').text(ecldToken['sc']);
+            $('#span-ecldSymbol').text(ecldToken['symbol']);
+            $('#span-ecldDec').text(ecldToken['decimals']);
+
+            $('#btn-viewECLD').attr('href', `${ecldToken['chainDetails']['blockExplorerUrls'][0]}/token/${ecldToken['sc']}`)
+
+        </script>
+        <!-- End Init -->
+
+
+        <!-- Start Wallet -->
+        <script type="text/javascript">
+
+            async function checkWalletInstalled() {
+                logger('debug', `(checkWalletInstalled) -- Checking the Ethereum wallet is installed...`);
+
+                if (typeof window.ethereum == 'undefined') {
+
+                    logger('warning', `(checkWalletInstalled) -- No Ethereum Wallet found`);
+                    return false;
+
+                } else {
+
+                    logger('debug', `(checkWalletInstalled) -- Found installed Ethereum Wallet`);
+                    return true;
+
+                }
+
+            }
+
+
+
+
+            async function getWalletAccounts() {
+                logger('debug', `(getWalletAccounts) -- Requesting wallet accounts...`);
+
+                let walletAccounts = new Array();
+
+                try {
+
+                    walletAccounts = await window.ethereum.request(
+                        {
+                            method: 'eth_requestAccounts',
+                            params: []
+                        });
+
+                } catch (err) {
+
+                    if (err.code === 4001) {
+                        logger('warning', `(getWalletAccounts) -- User canceled the connection request (Code: ${err.code})`);
+                    }
+                    else {
+                        logger('warning', `(getWalletAccounts) -- An error occured during the wallet connection (Code: ${err.code})`);
+                    }
+
+                    return null;
+                }
+
+                logger('debug', `(getWalletAccounts) -- Received walletAccounts: (${walletAccounts})`);
+
+                return walletAccounts;
+            }
+
+
+
+
+            async function connectWallet() {
+                logger('debug', `(connectWallet) -- Connecting wallet...`);
+
+                let walletAccounts = await getWalletAccounts();
+
+                if (walletAccounts === null || walletAccounts.length === 0) {
+                    logger('warning', `(connectWallet) -- No walletAccounts found: (${walletAccounts})`);
+                    showToast(false, `Please connect your wallet to continue!`);
+
+
+                    disconnectWallet();
+                    return;
+                }
+
+                logger('debug', `(connectWallet) -- Received walletAccounts: (${walletAccounts})`);
+
+                activeWalletAccount = walletAccounts[0];
+                displayWalletAccount = '0♯' + activeWalletAccount.substr(2, 4) + ' ... ' + activeWalletAccount.substr(activeWalletAccount.length - 4, activeWalletAccount.length - 1);
+
+                logger('debug', `(connectWallet) -- account ${activeWalletAccount} will be used`);
+                
+                await walletConnected();
+
+                return;
+            }
+
+
+
+
+            async function disconnectWallet(toast = false) {
+                logger('debug', `(disconnectWallet) -- Disconnecting wallet...`);
+                if (toast === true) { showToast(false, `Wallet disconnected`); }
+
+                activeWalletAccount = null;
+                displayWalletAccount = null;
+
+                $('#span-connect-wallet').text('');
+                $('#btn-connect-wallet').off('click');
+
+                initWallet();
+
+                return;
+            }
+
+
+
+
+            async function walletConnected() {
+                logger('debug', `(walletConnected) -- Final wallet checking...`);
+
+                let walletAccounts = await getWalletAccounts();
+
+                if (walletAccounts[0] === activeWalletAccount) {
+
+                    logger('debug', `(walletConnected) -- Wallet is finally connected with account (${walletAccounts[0]} === ${activeWalletAccount})`);
+                    showToast(true, `Your wallet successfully connected to the app!`);
+
+                    $('#btn-connect-wallet').off('click');
+                    $('#btn-connect-wallet').click(function() { disconnectWallet(true); });
+
+                    $('#span-connect-wallet').text(displayWalletAccount);
+
+                    $('#btn-add-etny').off('click');
+                    $('#btn-add-etny').click(function() { addETNYToken(); });
+
+                    $('#btn-add-ecld').off('click');
+                    $('#btn-add-ecld').click(function() { addECLDToken(); });
+
+                    window.ethereum.on('accountsChanged', handleAccountsChanged);
+
+                } else {
+
+                    logger('warning', `(walletConnected) -- Wallet is not connected because of (${walletAccounts[0]} =?= ${activeWalletAccount}) or (${walletChainId} =?= ${appChainId})`);
+                    
+                    if (walletAccounts[0] !== activeWalletAccount) { showToast(false, `Check your wallet account and try again.`); }
+
+                    disconnectWallet();
+
+                }
+
+                return;
+            }
+
+
+
+
+            async function initWallet() {
+
+                if (await checkWalletInstalled() === true) {
+
+                    $('#btn-connect-wallet').addClass('btn-outline-warning');
+                    $('#span-connect-wallet').text('Connect Wallet');
+                    $('#btn-connect-wallet').off('click');
+                    $('#btn-connect-wallet').click(function() { connectWallet(); });
+
+                } else {
+
+                    $('#btn-connect-wallet').addClass('btn-outline-danger');
+                    $('#span-connect-wallet').text('Install Wallet');
+                    $('#btn-connect-wallet').off('click');
+                    $('#btn-connect-wallet').click(function() { window.open(walletDownloadURL); });
+
+                }
+
+                $('#btn-add-etny').off('click');
+                $('#btn-add-etny').click(function() { showToast(false, "Connect your Wallet first!"); });
+
+                $('#btn-add-ecld').off('click');
+                $('#btn-add-ecld').click(function() { showToast(false, "Connect your Wallet first!"); });
+
+                return;
+            }
+
+
+
+
+            async function handleAccountsChanged(accounts) {
+                logger('debug', `(handleAccountsChanged) -- Handling accountsChanged event...`);
+
+                if (accounts.length > 0) {
+                    disconnectWallet();
+                    connectWallet();
+                } else {
+                    disconnectWallet(true);
+                }
+
+                return;
+            }
+
+        </script>
+        <!-- End Wallet -->
+
+
+        <!-- Start Tokens -->
+        <script type="text/javascript">
+
+            async function addETNYToken() {
+
+            $('#btn-spinner-etny').removeClass('visually-hidden');
+            $('#btn-add-etny').attr('disabled', true);
+
+
+            try {
+
+                await window.ethereum.request(
+                    {
+                        method: 'wallet_switchEthereumChain',
+                        params: [{ chainId: etnyToken['chainDetails']['chainId'] }]
+                    });
+
+            } catch(err) {
+
+                if (err.code === 4902 || err.code === -32603) {
+                    logger('warning', `(addETNYToken) -- chaiId ${etnyToken['chainID']} is not presented (Code: ${err.code}). Trying to add...`);
+
+                    try {
+
+                        await window.ethereum.request({
+                            method: 'wallet_addEthereumChain',
+                            params: [ etnyToken['chainDetails'] ]
+                        });
+
+                    } catch(err) {
+
+                        if (err.code === 4001) {
+                            logger('warning', `(addETNYToken) -- User cancelled request to change the network: (Code: ${err.code})`);
+
+                            $('#btn-spinner-etny').addClass('visually-hidden');
+                            $('#btn-add-etny').attr('disabled', false);                
+                
+                            showToast(false, `User cancelled the operation!`);
+                
+                            return;
+                
+                        } else {
+                            logger('warning', `(addETNYToken) -- Unknown problem: (Code: ${err.code})`);
+
+                            $('#btn-spinner-etny').addClass('visually-hidden');
+                            $('#btn-add-etny').attr('disabled', false);                
+                
+                            showToast(false, `Cannot switch your wallet to ${etnyToken['chainDetails']['chainName']} (Code: ${err.code})`);
+                
+                            return;
+                
+                        }
+
+                    }
+
+                } else if (err.code === 4001) {
+
+                    logger('warning', `(addETNYToken) -- User cancelled request to change the network: (Code: ${err.code})`);
+
+                    $('#btn-spinner-etny').addClass('visually-hidden');
+                    $('#btn-add-etny').attr('disabled', false);        
+                
+                    showToast(false, `User cancelled the operation!`);
+
+                    return;
+
+                } else {
+
+                    logger('warning', `(addETNYToken) -- Unknown problem: (Code: ${err.code})`);
+
+                    $('#btn-spinner-etny').addClass('visually-hidden');
+                    $('#btn-add-etny').attr('disabled', false);
+
+                    showToast(false, `Cannot switch your wallet to ${etnyToken['chainDetails']['chainName']} (Code: ${err.code})`);
+
+                    return;
+
+                }
+
+            }
+
+
+            try {
+
+                await window.ethereum.request({
+                    method: 'wallet_watchAsset',
+                    params: {
+                        type: 'ERC20',
+                        options: {
+                            address: etnyToken['sc'],
+                            symbol: etnyToken['symbol'],
+                            decimals: etnyToken['decimals']
+                        }
+                    }
+                });
+
+            } catch (err) {
+
+                if (err.code === 4001) {
+
+                    logger('warning', `(addETNYToken) -- User cancelled the request to add the token: (Code: ${err.code})`);
+
+                    $('#btn-spinner-etny').addClass('visually-hidden');
+                    $('#btn-add-etny').attr('disabled', false);        
+                
+                    showToast(false, `User cancelled the operation!`);
+
+                    return;
+
+                } else {
+
+                    logger('warning', `(addWalletAsset) -- Cannot add asset (${err.code})`);
+
+                    $('#btn-spinner-etny').addClass('visually-hidden');
+                    $('#btn-add-etny').attr('disabled', false);
+                
+                    showToast(false, `Cannot add asset (Code: ${err.code}). Try to add it manually.`);
+
+                    return false;
+
+                }
+
+            }
+
+
+            $('#btn-spinner-etny').addClass('visually-hidden');
+            $('#btn-add-etny').attr('disabled', false);
+
+            showToast(true, `Successfully added ETNY token to your wallet!`);
+
+            }
+
+
+
+
+            async function addECLDToken() {
+
+            $('#btn-spinner-ecld').removeClass('visually-hidden');
+            $('#btn-add-ecld').attr('disabled', true);
+
+
+            try {
+
+                await window.ethereum.request(
+                    {
+                        method: 'wallet_switchEthereumChain',
+                        params: [{ chainId: ecldToken['chainDetails']['chainId'] }]
+                    });
+
+            } catch(err) {
+
+                if (err.code === 4902 || err.code === -32603) {
+                    logger('warning', `(addECLDToken) -- chaiId ${ecldToken['chainID']} is not presented (Code: ${err.code}). Trying to add...`);
+
+                    try {
+
+                        await window.ethereum.request({
+                            method: 'wallet_addEthereumChain',
+                            params: [ ecldToken['chainDetails'] ]
+                        });
+
+                    } catch(err) {
+
+                        if (err.code === 4001) {
+                            logger('warning', `(addECLDToken) -- User cancelled request to change the network: (Code: ${err.code})`);
+
+                            $('#btn-spinner-ecld').addClass('visually-hidden');
+                            $('#btn-add-ecld').attr('disabled', false);
+                
+                            showToast(false, `User cancelled the operation!`);
+                
+                            return;
+                
+                        } else {
+                            logger('warning', `(addECLDToken) -- Unknown problem: (Code: ${err.code})`);
+
+                            $('#btn-spinner-ecld').addClass('visually-hidden');
+                            $('#btn-add-ecld').attr('disabled', false);
+                
+                            showToast(false, `Cannot switch your wallet to ${ecldToken['chainName']} (Code: ${err.code})`);
+                
+                            return;
+                
+                        }
+
+                    }
+
+                } else if (err.code === 4001) {
+
+                    logger('warning', `(addECLDToken) -- User cancelled request to change the network: (Code: ${err.code})`);
+
+                    $('#btn-spinner-ecld').addClass('visually-hidden');
+                    $('#btn-add-ecld').attr('disabled', false);
+                
+                    showToast(false, `User cancelled the operation!`);
+
+                    return;
+
+                } else {
+
+                    logger('warning', `(addECLDToken) -- Unknown problem: (Code: ${err.code})`);
+
+                    $('#btn-spinner-ecld').addClass('visually-hidden');
+                    $('#btn-add-ecld').attr('disabled', false);
+
+                    showToast(false, `Cannot switch your wallet to ${ecldToken['chainName']} (Code: ${err.code})`);
+
+                    return;
+
+                }
+
+            }
+
+            try {
+
+                await window.ethereum.request({
+                    method: 'wallet_watchAsset',
+                    params: {
+                        type: 'ERC20',
+                        options: {
+                            address: ecldToken['sc'],
+                            symbol: ecldToken['symbol'],
+                            decimals: ecldToken['decimals']
+                        }
+                    }
+                });
+
+            } catch (err) {
+
+                if (err.code === 4001) {
+
+                    logger('warning', `(addECLDToken) -- User cancelled the request to add the token (Code: ${err.code})`);
+
+                    $('#btn-spinner-ecld').addClass('visually-hidden');
+                    $('#btn-add-ecld').attr('disabled', false);        
+                
+                    showToast(false, `User cancelled the operation!`);
+
+                    return;
+
+                } else {
+
+                    logger('warning', `(addECLDToken) -- Cannot add asset (${err.code})`);
+
+                    $('#btn-spinner-ecld').addClass('visually-hidden');
+                    $('#btn-add-ecld').attr('disabled', false);
+                
+                    showToast(false, `Cannot add asset (Code: ${err.code}). Try to add it manually.`);
+
+                    return false;
+
+                }
+
+            }
+
+            $('#btn-spinner-ecld').addClass('visually-hidden');
+            $('#btn-add-ecld').attr('disabled', false);
+
+            showToast(true, `Successfully added ECLD token to your wallet!`);
+
+            }
+
+        </script>
+        <!-- End Tokens -->
+
+
+        <script type="text/javascript">
+            initWallet();
+        </script>
+
+    </body>
+
+</html>
